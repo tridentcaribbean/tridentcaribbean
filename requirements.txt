@@ -1,0 +1,7 @@
+binaryornot==0.4.0
+chardet==2.3.0
+complexity==0.9.1
+Jinja2==2.8
+MarkupSafe==0.23
+PyYAML==3.11
+wheel==0.24.0
