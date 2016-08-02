@@ -712,7 +712,7 @@ padding-bottom:0px;
 border-bottom:1px solid #eee;
 }
 
-.hero h1{
+.hero h2{
 padding:0px;
 margin:0px;
 font-size:20px;
@@ -722,7 +722,7 @@ background:url('../img/dot.png') left center repeat-x;
 background-size:4px 20px;
 }
 
-.hero h1 span{
+.hero h2 span{
 background:#fff url('../img/body-back.png') repeat;
 padding-right:8px;
 }
