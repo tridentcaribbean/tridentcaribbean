@@ -1,4 +1,4 @@
 Workflow:
 
-Develop on master
-git subtree push --prefix www origin gh-pages
+complexity project  #Compiles files to /www folder
+git subtree push --prefix www origin gh-pages  # Deploy to www.tridentcaribbean.com
