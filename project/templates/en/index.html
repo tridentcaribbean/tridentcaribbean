@@ -1,8 +1,23 @@
 {% extends "base_en.html" %}
 
 {% block content %}
+
 		<div class="content">
 			<div class="container">
+				<div id="carousel">
+				        <img src="/img/stock/food_processing.jpg"/>
+				        <img src="/img/stock/meat_processing.jpg"/>
+				        <img src="/img/machinery.png"/>
+				        <img src="/img/stock/food_processing.jpg"/>
+				        <img src="/img/stock/meat_processing.jpg"/>
+				        <img src="/img/machinery.png"/>
+				        <img src="/img/stock/food_processing.jpg"/>
+				        <img src="/img/stock/meat_processing.jpg"/>
+				        <img src="/img/machinery.png"/>
+				</div>
+
+
+
 				<div class="rposts">
 	               <h2>Categories</h2>
 					<div class="row">
@@ -97,3 +112,21 @@
 
 {% endblock %}
 
+{% block javascript %}
+	<script src="/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="/js/jquery.mousewheel.min.js"></script>
+	<script src="/js/jquery.kinetic.min.js"></script>
+	<script src="/js/jquery.smoothdivscroll-1.3-min.js"></script>
+	
+	<script>
+	// Initialize the plugin with no custom options
+	$(document).ready(function () {
+		// None of the options are set
+		$("div#carousel").smoothDivScroll({
+			autoScrollingMode: "onStart",
+			hotSpotScrolling: false,
+			autoScrollingInterval: 20
+		});
+	});
+	</script>
+{% endblock %}
