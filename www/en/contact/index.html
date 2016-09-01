@@ -50,7 +50,6 @@
 				<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 					<ul class="nav navbar-nav">
 						<li><a href="/en/">Home</a></li>
-						<li><a href="/en/products/">Products</a></li>
 						<li><a href="/en/markets/">Markets</a></li>
 						<li><a href="/en/about/">About</a></li>
 						<li><a href="/en/contact/">Contact Us</a></li>
@@ -85,38 +84,44 @@
                                     <h5>Contact Form</h5>
                                     <hr />
                                     <div class="form">
-                                      <form class="form-horizontal" action="https://formspree.io/jbeatty@tridentcaribbean.com" method="post">
+                                      <form id="contact-form" class="form-horizontal" action="https://formspree.io/jbeatty@tridentcaribbean.com" method="post">
                                           <input type="hidden" name="_subject" value="New contact request from tridentcaribbean.com" />
                                           <input type="hidden" name="_cc" value="wsantana@tridentcaribbean.com" />
                                           <input type="text" name="_gotcha" style="display:none" />
+                                          
                                           <div class="form-group">
-                                            <label class="control-label col-md-3" for="name">Name</label>
-                                            <div class="col-md-9">
-                                              <input type="text" class="form-control" id="name" name="name">
+                                            <div class="col-md-9 col-md-offset-3">
+                                              * = Required Fields
                                             </div>
                                           </div>
                                           <div class="form-group">
-                                            <label class="control-label col-md-3" for="email">Email</label>
+                                            <label class="control-label col-md-3" for="name">Name*</label>
                                             <div class="col-md-9">
-                                              <input type="text" class="form-control" id="email" name="email">
+                                              <input type="text" class="form-control" id="name" name="name" required>
                                             </div>
                                           </div>
                                           <div class="form-group">
-                                            <label class="control-label col-md-3" for="website">Company</label>
+                                            <label class="control-label col-md-3" for="email">Email*</label>
                                             <div class="col-md-9">
-                                              <input type="text" class="form-control" id="company" name="company">
+                                              <input type="text" class="form-control" id="email" name="email" required>
                                             </div>
                                           </div>
                                           <div class="form-group">
-                                            <label class="control-label col-md-3" for="website">Address</label>
+                                            <label class="control-label col-md-3" for="website">Company*</label>
                                             <div class="col-md-9">
-                                              <textarea class="form-control" id="address" rows="3" name="address"></textarea>
+                                              <input type="text" class="form-control" id="company" name="company" required>
                                             </div>
                                           </div>
                                           <div class="form-group">
-                                            <label class="control-label col-md-3" for="comment">Comment</label>
+                                            <label class="control-label col-md-3" for="website">Address*</label>
                                             <div class="col-md-9">
-                                              <textarea class="form-control" id="comment" rows="4" name="comment"></textarea>
+                                              <textarea class="form-control" id="address" rows="3" name="address" required></textarea>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="control-label col-md-3" for="comment">Comment*</label>
+                                            <div class="col-md-9">
+                                              <textarea class="form-control" id="comment" rows="4" name="comment" required></textarea>
                                             </div>
                                           </div>
                                           <!-- Buttons -->
@@ -230,6 +235,11 @@
 		<script src="/js/bootstrap.min.js"></script>
 
 		
-		
+  <script src="/js/jquery-validate.min.js"></script>
+
+  <script>
+    $("#contact-form").validate();
+  </script>
+
 	</body>	
 </html>
