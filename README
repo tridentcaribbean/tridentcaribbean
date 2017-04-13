@@ -1,4 +1,4 @@
 Workflow:
 
 complexity project  #Compiles files to /www folder
-git subtree push --prefix www origin gh-pages  # Deploy to www.tridentcaribbean.com
+git push origin `git subtree split --prefix www master`:gh-pages --force  # Deploy to tridentcaribbean.com
